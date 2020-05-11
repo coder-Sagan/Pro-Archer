@@ -19,25 +19,25 @@ backgroundImg= loadImage("images/download.jpg");
 }
 
 function setup() {
-  createCanvas(1600,789);
+  createCanvas(displayWidth, displayHeight-111);
   engine = Engine.create();
   world = engine.world;
 
   ground = new Ground(800,789,1600,14);
   arrow=new Arrow(235,377,200,100);
   bow = new Bow(arrow.body,{x:235,y:377});
-  pig1=new Pig(1450,390,100,100);
-  pig2=new Pig(1325,240,100,100);
-  pig3=new Pig(1325,540,100,100);
-  pig4=new Pig(1200,90,100,100);
-  pig5=new Pig(1200,690,100,100);
+  pig1=new Pig(1540,390,100,100);
+  pig2=new Pig(1415,240,100,100);
+  pig3=new Pig(1415,540,100,100);
+  pig4=new Pig(1290,90,100,100);
+  pig5=new Pig(1290,690,100,100);
  
   
-  log1=new Log(1450,410,100,20);
-  log2=new Log(1325,260,100,20);
-  log3=new Log(1325,560,100,20);
-  log4=new Log(1200,110,100,20);
-  log5=new Log(1200,710,100,20);
+  log1=new Log(1540,410,100,20);
+  log2=new Log(1415,260,100,20);
+  log3=new Log(1415,560,100,20);
+  log4=new Log(1290,110,100,20);
+  log5=new Log(1290,710,100,20);
   
  }
 
@@ -49,7 +49,7 @@ function draw() {
   noStroke();
   textSize(35);
   fill("yellow");
-  text("Score  " + score, width-300, 50);
+  text("Score  " + score, width-200, 50);
   text("Destroy the pigs",width-1000,100);
   textSize(15);
   text("(Press space to bring the arrow back)",width-1000,125);
@@ -89,6 +89,7 @@ function mouseReleased(){
         bow.attach(arrow.body);
     }
 }
+
 
 
 
